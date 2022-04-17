@@ -2114,11 +2114,11 @@
 
 
 %%
-% If there is a `tufte-common-local.tex' file, load it up.
+% If there is a `packages-local.tex' file, load it up.
 
-\IfFileExists{tufte-common-local.tex}
-  {\input{tufte-common-local.tex}%
-   \@tufte@info@noline{Loading tufte-common-local.tex}}
+\IfFileExists{packages-local.tex}
+  {\input{packages-local.tex}%
+   \@tufte@info@noline{Loading packages-local.tex}}
   {}
 
 

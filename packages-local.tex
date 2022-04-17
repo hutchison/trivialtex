@@ -1,0 +1,318 @@
+% Über die Jahre haben sich einige Pakete als nützlich erwiesen.
+% Damit ich nicht bei jedem neuen Dokument raussuchen muss, welches Paket wofür gebraucht
+% wird, gibt’s hier die Zusammenfassung.
+
+% Einfach mittels \input{packages-local} einbinden.
+% Wenn die Dokumentenklasse tufte-handout oder tufte-book ist, dann wird das hier
+% automatisch geladen.
+
+% Deutsche Sprache bei Silbentrennung und Datum:
+\usepackage[ngerman]{babel}
+
+% _das_ Mathepaket schlechthin:
+%\usepackage[
+%  %% Nummerierung von Gleichungen links:
+%  leqno,
+%  %% Ausgabe von Gleichungen linksbündig:
+%  fleqn,
+%]{mathtools}
+% und dazu noch ein paar Mathesymbole und so:
+% (muss vor mathspec geladen werden)
+%\usepackage{amsmath, amssymb}
+
+%\usepackage{microtype}
+
+% https://ctan.org/pkg/parskip
+%\usepackage[
+%%skip=0.5baselineskip plus 2pt,  % Der Abstand zwischen zwei Absätzen.
+%%indent=0pt, % Die Einrückung der ersten Zeile eines Absatzes.
+%%parfill=30pt, % Der Abstand des Endes der letzten Zeile eines Absatzes und dem rechten Seitenrand.
+%]{parskip}
+
+% chemische Formeln
+% https://ctan.org/pkg/mhchem
+%\usepackage{mhchem}
+
+
+% St. Mary Road, liefert Symbole für theoretische Informatik (z.B. \lightning):
+% https://www.ctan.org/pkg/stmaryrd
+%\usepackage{stmaryrd}
+
+% nutze die volle Seite als Satzspiegel:
+% https://www.ctan.org/pkg/fullpage
+%\usepackage[
+  % Randbreite sei 1.5cm (sonst ist sie 1in):
+  %cm,
+  % Kopf- und Fußzeile werden miteinbezogen:
+  %headings
+%]{fullpage}
+
+% verbesserte Tabellen
+% https://www.ctan.org/pkg/array
+% bietet u.a. die Spaltenmöglichkeit 'm{width}' = zentrierte Spalte mit fester Breite
+%\usepackage{array}
+
+% kann komplexe Linien in Tabellen ziehen:
+% https://www.ctan.org/pkg/hhline
+%\usepackage{hhline}
+
+% mehrseitige Tabellen:
+% https://www.ctan.org/pkg/longtable
+%\usepackage{longtable}
+
+% Tabellen mit gedehnten Spalten:
+% https://www.ctan.org/pkg/tabularx
+%\usepackage{tabularx}
+% vielleicht auch tabulary anschauen:
+% https://www.ctan.org/pkg/tabulary
+%\usepackage{tabulary}
+
+% Pimpt enumerate auf (optionales Argument liefert Nummerierung):
+\usepackage{enumerate}
+
+% Kann descriptions auf die selbe Höhe bringen:
+% https://www.ctan.org/pkg/enumitem
+%\usepackage{enumitem}
+
+% Liefert Hyperlinks (\hyperref, \url, \href}
+\usepackage{hyperref}
+%\hypersetup{%
+%  colorlinks=false,
+%  linkcolor=black,
+%  urlcolor=blue,
+%}
+
+% To automatically typeset a cross-reference according to the type of thing referred to,
+% simply refer to it using \cref{<label>}.
+% https://www.ctan.org/pkg/cleveref
+%\usepackage{cleveref}
+
+% Farben (wie bei TikZ):
+%\usepackage[dvipsnames]{xcolor}
+%\definecolor{mygray}{gray}{0.8}
+
+% Access to PostScript standard Symbol and Dingbats fonts
+% https://www.ctan.org/pkg/pifont
+%\usepackage[]{pifont}
+
+% Ändert den Zeilenabstand:
+%\usepackage[
+%  % nur eine Möglichkeit auswählen:
+%  singlespacing
+%  %onehalfspacing
+%  %doublespacing
+%]{setspace}
+
+% Schönere Tabellen
+% dazu gibt's neue Kommandos:
+% - \toprule[(Dicke)], \midrule[(Dicke)], \bottomrule[(Dicke)]
+% - \addlinespace: Extrahöhe zwischen Zeilen
+\usepackage{booktabs}
+
+% TODOs:
+%\usepackage[
+%  ngerman,
+%  textwidth=2cm,
+%  textsize=tiny,
+%  backgroundcolor=white,
+%  linecolor=black,
+%]{todonotes}
+
+% Schöne numerische Zitierungen:
+%\usepackage{cite}
+%\usepackage[square, numbers]{natbib}
+
+% Ermöglicht durch \begin{linenumbers} Zeilennummern anzuzeigen:
+%\usepackage{lineno}
+
+% Ermöglicht Zugriff auf die letzte Seite (z.B. \pageref{LastPage}):
+\usepackage{lastpage}
+
+% Logische Beweise:
+%\usepackage{bussproofs}
+
+% Unterstreichungen (\uline, \uuline, \sout: durchgestrichen, \uwave):
+%\usepackage{ulem}
+
+% Kann alle möglichen Maße ändern
+% will man Querformat, dann:
+%\usepackage[landscape]{geometry}
+
+% bietet gestrichelte vert. Linien in Tabellen (':')
+%\usepackage{arydshln}
+
+% Quelltext schön setzen:
+%\usepackage{listings}
+% Quelltext noch schöner setzen:
+% (verlangt "xelatex -shell-escape"!)
+%\usepackage{minted}
+
+% Algorithmen und Pseudocode:
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\floatname{algorithm}{Algorithmus}
+%\renewcommand{\algorithmicrequire}{\textbf{Eingabe:}}
+%\renewcommand{\algorithmicensure}{\textbf{Ausgabe:}}
+
+% Bilder einbinden:
+%\usepackage{graphicx}
+%\usepackage{subcaption}
+
+% Verbessert den Satz von Abbildungsüberschriften:
+%\usepackage{caption}
+
+% um in Tabellen eine Zelle über mehrere Zeilen laufen zu lassen:
+%\usepackage{multirow}
+
+%\usepackage{float}
+
+% SI-Einheiten mittels \si{}:
+%\usepackage[mode=text]{siunitx}
+%\sisetup{%
+%  output-decimal-marker={,},
+%  per-mode=fraction,
+%  exponent-product=\cdot,
+%}
+%\DeclareSIUnit\cal{cal}
+%\DeclareSIUnit\diopter{dpt}
+%\DeclareSIUnit\fahrenheit{F}
+%\DeclareSIUnit\molar{\textsc{m}}
+%\DeclareSIUnit\pH{pH}
+%\DeclareSIUnit\gewprozent{Gew\%}
+%\DeclareSIUnit\poise{P}
+
+% nette Brüche mittels \sfrac{}{}:
+%\usepackage{xfrac}
+
+% Coole Zeichnungen:
+%\usepackage{tikz}
+%\usetikzlibrary{%
+  %backgrounds,
+  %mindmap,
+  %shapes.geometric,
+  %shapes.symbols,
+  %shapes.misc,
+  %shapes.multipart,
+  %positioning,
+  %fit,
+  %calc,
+  %arrows,
+  %automata,
+  %trees,
+  %decorations.pathreplacing,
+  %circuits.ee.IEC,
+  %intersections,
+  %through,
+%}
+
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.16}
+
+% eigens gebaute Lochmarken:
+%\usepackage{eso-pic}
+%\AddToShipoutPicture*{
+  %\put(\LenToUnit{0mm},\LenToUnit{228.5mm})
+    %{\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+  %\put(\LenToUnit{0mm},\LenToUnit{68.5mm})
+    %{\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+%}
+
+%\usepackage{titlesec}
+%\titleformat*{\paragraph}{\itshape\mdseries} % chktex 6
+% \titleformat{\section}
+%   {\sffamily}{\thesection}{1em}{}
+
+% ein Eintrag in einer description-Liste wird in ganz normaler Schrift angezeigt (kein
+% sans-serif, kein fett):
+%\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}#1}
+
+%\usepackage{abstract}
+%\addto\captionsngerman{\renewcommand{\abstractname}{Abstract}}
+
+%\usepackage{epigraph}
+%\setlength{\epigraphwidth}{0.42\textwidth}
+
+% Definitionen und Sätze:
+%\usepackage[]{amsthm}
+% Definitionen, Probleme werden alle mit einem Zeilenumbruch gesetzt, z.B.:
+%   Definition 1 (Graph)
+%   Ein Graph G = (V, E) ist …
+%\newtheoremstyle{bonny}% schottisch für „ansehnlich“
+%  {9pt}% measure of space to leave above the theorem. E.g.: 3pt
+%  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+%  {}% name of font to use in the body of the theorem
+%  {}% measure of space to indent
+%  {\bfseries}% name of head font
+%  {\smallskip}% punctuation between head and body
+%  {\newline}% space after theorem head; " " = normal interword space
+%  {}% Manually specify head
+
+%\theoremstyle{bonny}
+%\newtheorem{definition}{Definition}
+%\newtheorem{problem}{Problem}
+
+% Beispiele, Sätze, Theoreme, Lemmata werden alle *ohne* Zeilenumbruch gesetzt, z.B.:
+%   Satz 1  Für alle Graphen gilt …
+%\newtheoremstyle{sweet}%
+%  {9pt}% measure of space to leave above the theorem. E.g.: 3pt
+%  {6pt}% measure of space to leave below the theorem. E.g.: 3pt
+%  {}% name of font to use in the body of the theorem
+%  {}% measure of space to indent
+%  {\bfseries}% name of head font
+%  {}% punctuation between head and body
+%  {1em}% space after theorem head; " " = normal interword space
+%  {}% Manually specify head
+
+%\theoremstyle{sweet}
+%\newtheorem{beispiel}{Beispiel}
+%\newtheorem{satz}{Satz}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{folgerung}{Folgerung}
+
+%% coole Kopf- und Fußzeilen:
+%\usepackage{fancyhdr}
+%% Seitenstil ist natürlich fancy:
+%\pagestyle{fancy}
+%% alle Felder löschen:
+%\fancyhf{}
+%% Veranstaltung:
+%%\fancyhead[L]{}
+%% Seriennummer:
+%%\fancyhead[C]{}
+%% Name und Matrikelnummer:
+%%\fancyhead[R]{}
+%%\fancyfoot[L]{}
+%\fancyfoot[C]{\thepage}
+%%\fancyfoot[C]{\thepage\,/\,\pageref{LastPage}}
+%% Linie oben/unten:
+%\renewcommand{\headrulewidth}{0.0pt}
+%\renewcommand{\footrulewidth}{0.0pt}
+
+%\newcommand{\cmark}{\ding{51}}%
+%\newcommand{\xmark}{\ding{55}}%
+%\newcommand{\richtig}{\textcolor{ForestGreen}{\cmark}}
+%\newcommand{\falsch}{\textcolor{BrickRed}{\xmark}}
+
+%\newcommand{\unterschrift}[2][5cm]{%
+%  \begin{tabular}{@{}p{#1}@{}}
+%    #2 \\[2\normalbaselineskip]
+%    \hrule \\[-12pt]
+%    {\small Unterschrift} \\[2\normalbaselineskip]
+%    \hrule \\[-12pt]
+%    {\small Datum}
+%  \end{tabular}
+%}
+
+%\newcommand{\BigO}{\mathcal{O}}
+
+%\newenvironment{notiz}{
+%  \color{Maroon}
+%  \paragraph*{Notiz}
+%}{
+%  \color{black}
+%}
+
+%\newcommand{\p}[1]{\text{p#1}}
+%\newcommand{\pKs}{\text{pK$_\text{S}$}}
+%\newcommand{\pKb}{\text{pK$_\text{B}$}}
