@@ -306,7 +306,7 @@
 \ifthenelse{\boolean{@tufte@xetex}}{%
   \RequirePackage{amsmath}%
   \RequirePackage{xunicode}%
-  \RequirePackage{mathspec}% xltxtra loads xunicode and fontspec; must be loaded before bidi
+  \RequirePackage[MnSymbol]{mathspec}% xltxtra loads xunicode and fontspec; must be loaded before bidi
 }{}
 
 %%
@@ -323,7 +323,7 @@
 }
 
 \ifthenelse{\boolean{@tufte@luatex}}{%
-  \RequirePackage{mathspec}
+  \RequirePackage[MnSymbol]{mathspec}
   \RequirePackage[osf,sc]{mathpazo}
   \setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{TeX Gyre Pagella}
   \setsansfont[Renderer=Basic, Scale=0.90]{TeX Gyre Heros}
