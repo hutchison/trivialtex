@@ -1,0 +1,24 @@
+\documentclass[
+a4paper,
+%% folgende Einstellungen funktionieren nicht bei Tufte:
+%% keine Seitenzahlen:
+%empty,
+%% Schriftgröße (12pt, 11pt (Standard)):
+%11pt,
+%% kleinere Überschriften:
+%smallheadings,
+]
+% Wähle eins:
+{tufte-handout} % lädt packages-local automatisch
+%{scrartcl} \input{packages-local}
+
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+%\tableofcontents
+
+\end{document}
