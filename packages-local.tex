@@ -6,6 +6,53 @@
 % Wenn die Dokumentenklasse tufte-handout oder tufte-book ist, dann wird das hier
 % automatisch geladen.
 
+\makeatletter
+\@ifclassloaded{tufte-handout}{%
+  % Bei Tufte sind die Schriften schon eingestellt.
+  \typeout{Current class is tufte-handout, fonts are already configured.}
+}{%
+  \usepackage{ifxetex}
+  \ifxetex
+    \def\xelatexmainfont{Minion Pro}
+    \def\xelatexmainboldfont{Minion Pro Bold}
+    \def\xelatexsansfont{Gill Sans Light}
+    \def\xelatexsansboldfont{Gill Sans}
+    \def\xelatextitlepagefont{Gill Sans}
+    \def\xelatexmonofont{Fira Mono}
+    \def\xelatexmathfont{Minion Pro}
+
+    % Um auch schöne Schriftarten auswählen zu können:
+    \usepackage[MnSymbol]{mathspec}
+
+    % Wir wollen, dass alle unsere Schriften für TeX und einander angepasst sind:
+    \defaultfontfeatures{
+      Ligatures=TeX,
+      Mapping=TeX-text,
+      Scale=MatchLowercase,
+    }
+
+    % Die Hauptschriftart:
+    \setmainfont{\xelatexmainfont}[
+      BoldFont={\xelatexmainboldfont},
+    ]
+    % Die Matheschriftart:
+    \setmathfont(Digits,Latin,Greek)[
+      Numbers={Lining, Proportional}
+    ]{\xelatexmathfont}
+    \setmathrm{\xelatexmathfont}
+    % Die Schriftart für serifenlose Texte (z.B. Überschriften):
+    \setallsansfonts[
+      BoldFont={\xelatexsansboldfont},
+    ]{\xelatexsansfont}
+    % Und die Schriftart für nichtproportionale Texte:
+    \setallmonofonts[]{\xelatexmonofont}
+    \newfontface\titlepagefont{\xelatextitlepagefont}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+}
+\makeatother
+
 % Deutsche Sprache bei Silbentrennung und Datum:
 \usepackage[ngerman]{babel}
 
