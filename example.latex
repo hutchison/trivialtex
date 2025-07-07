@@ -9,8 +9,8 @@ a4paper,
 %smallheadings,
 ]
 % Wähle eins:
-{tufte-handout} % lädt packages-local automatisch
-%{scrartcl} \input{packages-local}
+%{tufte-handout} % lädt packages-local automatisch
+{article} \input{packages-local}
 
 \title{}
 \author{}
