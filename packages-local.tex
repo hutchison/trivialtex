@@ -21,6 +21,10 @@
     \def\xelatexmonofont{Fira Mono}
     \def\xelatexmathfont{Minion Pro}
 
+    % Deutsche Sprache bei Silbentrennung und Datum:
+    \usepackage{polyglossia}
+    \setdefaultlanguage[babelshorthands=true]{german}
+
     % Um auch schöne Schriftarten auswählen zu können:
     \usepackage[MnSymbol]{mathspec}
 
@@ -49,12 +53,12 @@
     \newfontface\titlepagefont{\xelatextitlepagefont}
   \else
     \usepackage[utf8]{inputenc}
+
+    % Deutsche Sprache bei Silbentrennung und Datum:
+    \usepackage[ngerman]{babel}
   \fi
 }
 \makeatother
-
-% Deutsche Sprache bei Silbentrennung und Datum:
-\usepackage[ngerman]{babel}
 
 % _das_ Mathepaket schlechthin:
 %\usepackage[
