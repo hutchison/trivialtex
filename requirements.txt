@@ -16,6 +16,7 @@ fancyhdr
 float
 geometry
 hyperref
+hyphen-german
 lastpage
 latexmk
 lineno
@@ -31,6 +32,7 @@ natbib
 nextpage
 parskip
 pgfplots
+polyglossia
 preprint
 setspace
 siunitx
